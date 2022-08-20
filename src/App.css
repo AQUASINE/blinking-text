@@ -1,10 +1,21 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blinker {
+  animation: blinking infinite 200ms step-end;
+  font-family: Impact, sans-serif;
+  color: white;
+  text-shadow: 0 0 0.02em black, 0 0 0.02em black, 0 0 0.02em black, 0 0 0.02em black;
+  font-size: 10em;
+}
+
+@keyframes blinking {
+  70% {
+    opacity: 0;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

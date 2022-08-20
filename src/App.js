@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import {Routes, Route, useParams, BrowserRouter} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/:text" element={<Text/>}/>
+            </Routes>
+        </BrowserRouter>
+    );
+}
+
+function Text() {
+    let params = useParams();
+    return <div className={"blinker"}>
+        {params.text}
     </div>
-  );
+
 }
 
 export default App;
