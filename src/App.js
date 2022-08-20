@@ -5,7 +5,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/:text" element={<Text/>}/>
+                <Route path="/blinking-text/:text" element={<Text/>}/>
             </Routes>
         </BrowserRouter>
     );
